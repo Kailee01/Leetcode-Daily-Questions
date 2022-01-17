@@ -21,7 +21,11 @@ public:
             s[st.top()]='$';
             st.pop();
         }
-        // cout<<s.size();
+        string ans="";
+        for(char ch:s){
+            if(ch!='$')ans.push_back(ch);
+        }
+        return ans;
         s.erase(remove(s.begin(), s.end(), '$'), s.end());
         return s;
     }
