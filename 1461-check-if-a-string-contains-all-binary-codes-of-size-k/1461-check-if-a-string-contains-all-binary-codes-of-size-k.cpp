@@ -12,7 +12,7 @@ public:
         }
         
         // cout<<prev_val<<endl;
-        set<int>st;
+        unordered_set<int>st;
         st.insert(prev_val);
         for(i=1;i<=s.size()-k;i++){
             int nums_to_remove=s[i-1]=='1'?(1<<(k-1)):0;
