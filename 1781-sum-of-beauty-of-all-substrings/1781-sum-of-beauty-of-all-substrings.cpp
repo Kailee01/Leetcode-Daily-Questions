@@ -3,8 +3,8 @@ public:
     int beautySum(string s) {
 
         int sum=0;
-        
-        for(int ln=1;ln<=s.size();ln++){
+        int n=s.size();
+        for(int ln=1;ln<=n;ln++){
             vector<int>frq(26,0);
             int min_frq=0,max_frq=0;
             
@@ -24,7 +24,7 @@ public:
                 
             // cout<<max_frq<<" "<<min_frq<<" "<<ln<<endl;
             sum+=(max_frq-min_frq);
-            for(int i=ln;i<s.size();i++){
+            for(int i=ln;i<n;i++){
                 
                 min_frq=0,max_frq=0;
                 frq[s[i]-'a']++;
